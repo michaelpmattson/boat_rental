@@ -1,5 +1,4 @@
 require './lib/boat'
-require './lib/renter'
 
 RSpec.describe Boat do
   describe '#initialize' do
@@ -9,7 +8,7 @@ RSpec.describe Boat do
       expect(kayak).to be_an_instance_of(Boat)
     end
 
-    xit 'has attributes' do
+    it 'has attributes' do
       kayak = Boat.new(:kayak, 20)
 
       expect(kayak.type).to eq(:kayak)
@@ -19,7 +18,7 @@ RSpec.describe Boat do
   end
 
   describe '#add_hour' do
-    xit 'adds hour' do
+    it 'adds hour' do
       kayak = Boat.new(:kayak, 20)
 
       expect(kayak.hours_rented).to eq(0)
